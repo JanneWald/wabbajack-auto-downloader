@@ -54,8 +54,7 @@ class ButtonPresser:
                 if self.attempts >= self.max_attempts:
                     print("Max attempts reached. Exiting...")
                     exit(1)
-            finally:
-                exit(0)
+
         
 def main():
     parser = optparse.OptionParser()
