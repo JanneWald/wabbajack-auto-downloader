@@ -1,8 +1,16 @@
+# This script uses your cursor to automatically click a target on the screen
+# Make sure target.png is in the same directory
+# Also the target has to exactly the same as the button, screenshot then crop the button,
+# Having definable borders/edges in the target picture helps the script to find the button
+
+# By Janne Wald
+# 4/28/2025
+
 import pyautogui
 import time
 import os
 import random
-# Requires pip install pyautogui opencv-python keyboard
+# user needs to: $ pip install pyautogui opencv-python pyscreeze pillow
 
 end = "\033[0m"
 green = "\033[32m"
@@ -16,24 +24,18 @@ mouse_speed = 1
 has_pause = False
 
 warning = f"""{red}
-___.                                                               
-\_ |__   ______  _  _______ _______   ____                         
- | __ \_/ __ \ \/ \/ /\__  \\_  __ \_/ __ \                        
- | \_\ \  ___/\     /  / __ \|  | \/\  ___/                        
- |___  /\___  >\/\_/  (____  /__|    \___  >                       
-     \/     \/             \/            \/                        
-  __  .__                     __                             .__   
-_/  |_|  |__   ____     _____/  |_  ___________  ____ _____  |  |  
-\   __\  |  \_/ __ \  _/ __ \   __\/ __ \_  __ \/    \\__  \ |  |  
- |  | |   Y  \  ___/  \  ___/|  | \  ___/|  | \/   |  \/ __ \|  |__
- |__| |___|  /\___  >  \___  >__|  \___  >__|  |___|  (____  /____/
-           \/     \/       \/          \/           \/     \/      
-  ___________________.___ ____  __.___________                     
- /   _____/\______   \   |    |/ _|\_   _____/                     
- \_____  \  |     ___/   |      <   |    __)_                      
- /        \ |    |   |   |    |  \  |        \                     
-/_______  / |____|   |___|____|__ \/_______  /                     
-        \/                       \/        \/                      
+  __  .__                                                          
+_/  |_|  |__   ____     ____  __ _________  _________________      
+\   __\  |  \_/ __ \  _/ ___\|  |  \_  __ \/  ___/  _ \_  __ \     
+ |  | |   Y  \  ___/  \  \___|  |  /|  | \/\___ (  <_> )  | \/     
+ |__| |___|  /\___  >  \___  >____/ |__|  /____  >____/|__|        
+           \/     \/       \/                  \/                  
+.__         .____    ________   ________    ____________________._.
+|__| ______ |    |   \_____  \  \_____  \  /   _____/\_   _____/| |
+|  |/  ___/ |    |    /   |   \  /   |   \ \_____  \  |    __)_ | |
+|  |\___ \  |    |___/    |    \/    |    \/        \ |        \ \|
+|__/____  > |_______ \_______  /\_______  /_______  //_______  / __
+        \/          \/       \/         \/        \/         \/  \/                      
 {end}"""
 
 def main():
