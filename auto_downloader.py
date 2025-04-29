@@ -48,6 +48,12 @@ class ButtonPresser:
                 time.sleep(5)
             except KeyboardInterrupt:
                 print("Exiting...")
+            except Exception as e:
+                print(f"An error occurred: {e}")
+                self.attempts += 1
+                if self.attempts >= self.max_attempts:
+                    print("Max attempts reached. Exiting...")
+                    exit(1)
             finally:
                 exit(0)
         
