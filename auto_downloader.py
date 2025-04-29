@@ -43,8 +43,13 @@ class ButtonPresser:
     
     def spam_click(self, button_name):
         while True:
-            self.attempt_to_click(button_name)
-            time.sleep(5)
+            try:
+                self.attempt_to_click(button_name)
+                time.sleep(5)
+            except KeyboardInterrupt:
+                print("Exiting...")
+            finally:
+                exit(0)
         
 def main():
     parser = optparse.OptionParser()
