@@ -17,7 +17,7 @@ class ButtonPresser:
             print("Connecting to Wabbajack...")
             app = Application(backend="uia")
             app.connect(title_re=program, timeout=5)
-            self.main_window = self.app.top_window()
+            self.main_window = app.top_window()
         
         except Exception as e:
             print(f"Error connecting to {program}: {e}")
