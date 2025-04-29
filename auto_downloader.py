@@ -53,7 +53,7 @@ def main():
     
     downloader = ButtonPresser(debug=options.debug)
     downloader.connect_to_program(".*Wabbajack.*") 
-    downloader.spam_click("Slow Download")
+    downloader.spam_click("SLOW DOWNLOAD")
     
     exit(0)
 
