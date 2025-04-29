@@ -30,6 +30,7 @@ class ButtonPresser:
         if self.debug: print(f"Attempt #{self.attempts}")
         try:
             self.main_window.child_window(title=button_name, control_type="Button").invoke()
+            self.main_window.minimize()
             self.attempts = 0
             print("Clicked the button")
         
