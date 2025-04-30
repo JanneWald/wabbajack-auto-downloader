@@ -5,7 +5,7 @@ Here are 2 different tools to solve this.
 **NOTE: This speeds up and automates the install process but is still going to be much slower than paying for premium**
 
 ## AutoDownloader
-This tool utilitizes UIA (UI Automation) which should owrk on most windows apps, including wabbajack. Requiring minimal setup and won't kidnap the mouse on your desktop.
+This tool utilitizes UIA (UI Automation) which should work on most windows apps, including wabbajack. Requiring minimal setup and won't kidnap the mouse on your desktop.
 #### Setup
 You will need to install the following `$ pip install pywinauto`
 #### Running
